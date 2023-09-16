@@ -9,13 +9,7 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
     } );
      
     }
-    
-    //detecting keyboard press
-    document.addEventListener("keydown", function(event){
-        makeSound(event.key);
-        buttonAnimation(event.key);
-    });
-    
+
     function makeSound(key){
         switch(key){
             case "w":
@@ -50,6 +44,13 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
                 console.log(this.innerHTML);
         }
     }
+    
+    //detecting keyboard press
+    document.addEventListener("keydown", function(event){
+        makeSound(event.key);
+        buttonAnimation(event.key);
+    });
+    
     
     function buttonAnimation(currentKey){
         var activeButton = document.querySelector("." + currentKey);
